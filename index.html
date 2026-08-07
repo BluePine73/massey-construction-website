@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massey Construction Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#4e675b',
+                        brandGold: '#e8a328',
+                        brandDark: '#1f2937',  
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <button id="menu-open-btn" class="text-brandDark hover:text-brandGold text-2xl md:text-3xl mr-4 md:mr-6 focus:outline-none transition">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a href="index.html" class="flex items-center">
+                        <img src="image.png" alt="Massey Construction Solutions Logo" class="h-12 md:h-16 w-auto mr-3 md:mr-4 object-contain">
+                        <div class="border-l-2 border-brandGold pl-3 md:pl-4 flex items-center">
+                            <h1 class="font-black text-sm sm:text-base md:text-2xl text-brandGold uppercase tracking-widest">
+                                Massey <span class="font-bold text-brandGreen">Construction Solutions</span>
+                            </h1>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#contact" class="hidden sm:inline-block bg-brandGold text-white px-6 py-2.5 rounded shadow hover:bg-yellow-600 transition duration-300 font-bold uppercase text-sm tracking-wide">Book Consult</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slide-in Menu -->
+    <div id="slide-menu" class="fixed inset-0 z-[100] bg-brandDark/95 backdrop-blur-sm transform -translate-x-full transition-transform duration-300 flex flex-col justify-center items-center">
+        <button id="menu-close-btn" class="absolute top-8 left-8 text-white hover:text-brandGold text-4xl focus:outline-none transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <nav class="flex flex-col space-y-8 text-center">
+            <a href="index.html" class="menu-link text-3xl font-black text-white hover:text-brandGold transition uppercase tracking-widest">Home</a>
+            <a href="index.html#about" class="menu-link text-3xl font-black text-white hover:text-brandGold transition uppercase tracking-widest">About Us</a>
+            <a href="index.html#services" class="menu-link text-3xl font-black text-white hover:text-brandGold transition uppercase tracking-widest">Services</a>
+            <a href="portfolio.html" class="menu-link text-3xl font-black text-white hover:text-brandGold transition uppercase tracking-widest">Portfolio</a>
+            <a href="careers.html" class="menu-link text-3xl font-black text-white hover:text-brandGold transition uppercase tracking-widest">Careers</a>
+            <a href="index.html#contact" class="menu-link text-3xl font-black text-brandGold hover:text-white transition uppercase tracking-widest">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-brandDark text-white">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888081-30e793910c26?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 flex flex-col items-start">
+            <span class="text-brandGold font-bold tracking-widest uppercase mb-2">Heavy Civil & Infrastructure Experts</span>
+            <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6 max-w-3xl">Building the Foundation for Tomorrow's Connections.</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">Specializing in heavy civil, telecommunications, and utility infrastructure. We deliver precision, durability, and excellence on every project.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="bg-brandGold text-white px-8 py-4 rounded font-bold uppercase tracking-wide hover:bg-yellow-600 transition shadow-lg text-center">Request Information</a>
+                <a href="#services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold uppercase tracking-wide hover:bg-white hover:text-brandDark transition text-center">Our Capabilities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-brandGreen font-bold uppercase tracking-widest mb-2">About Us</h3>
+                    <h2 class="text-3xl font-black text-brandDark mb-6">Driven by Quality. Grounded in Experience.</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">At Massey Construction Solutions, we understand that infrastructure is the backbone of modern society. Whether we are laying the groundwork for heavy civil projects, installing critical utility networks, or expanding telecommunications grids, our commitment to safety and precision remains unmatched.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Our experienced team utilizes state-of-the-art equipment and innovative methodologies to ensure your project is completed on time, on budget, and to the highest industry standards.</p>
+                    <ul class="space-y-3 font-semibold text-brandDark">
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Industry-Leading Safety Standards</li>
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i> On-Time Project Delivery</li>
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i> Expert Project Management</li>
+                    </ul>
+                </div>
+                <div class="h-96 rounded-lg shadow-xl relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356f27?q=80&w=1000&auto=format&fit=crop" alt="Heavy construction equipment on site" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-brandDark opacity-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-brandGold font-bold uppercase tracking-widest mb-2">Our Capabilities</h3>
+                <h2 class="text-3xl font-black text-brandDark">Comprehensive Infrastructure Solutions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-b-4 border-brandGreen">
+                    <div class="w-16 h-16 bg-brandGreen/10 rounded-full flex items-center justify-center mb-6 text-brandGreen text-2xl">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandDark mb-3">Heavy Civil</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Earthwork, grading, site preparation, and foundation construction for large-scale commercial and industrial developments.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-b-4 border-brandGold">
+                    <div class="w-16 h-16 bg-brandGold/10 rounded-full flex items-center justify-center mb-6 text-brandGold text-2xl">
+                        <i class="fa-solid fa-tower-cell"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandDark mb-3">Telecommunications</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Installation and expansion of fiber optic networks, cell towers, and underground conduit systems to keep communities connected.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-b-4 border-brandDark">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-brandDark text-2xl">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brandDark mb-3">Utility Infrastructure</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Safe and efficient trenching, laying, and repairing of water, sewer, and electrical lines for municipalities and private sectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-brandGreen text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-black mb-6">Let's Discuss Your Next Project</h2>
+                    <p class="text-gray-200 mb-8 leading-relaxed">Ready to get started? Fill out the form to request information or book a consultation with our project managers. We respond to all inquiries within 24 hours.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded flex items-center justify-center text-brandGold mr-4">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-300 uppercase tracking-wider">Call Us</p>
+                                <p class="font-bold text-lg">916-906-3219</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded flex items-center justify-center text-brandGold mr-4">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-300 uppercase tracking-wider">Email Us</p>
+                                <p class="font-bold text-lg">info@massey.construction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-2xl text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 text-brandDark">Request Information</h3>
+                    <form action="https://formsubmit.co/micah@massey.construction" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="New Website Inquiry from Massey Construction">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
+                                <input type="text" name="First_Name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
+                                <input type="text" name="Last_Name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold" placeholder="john@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Service Needed</label>
+                            <select name="Service_Needed" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold bg-white">
+                                <option value="" disabled selected>Select a Service...</option>
+                                <option value="Heavy Civil">Heavy Civil</option>
+                                <option value="Telecommunications">Telecommunications</option>
+                                <option value="Utility Infrastructure">Utility Infrastructure</option>
+                                <option value="Careers">Careers / Job Inquiry</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Project Details</label>
+                            <textarea name="Project_Details" required rows="4" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-brandGold focus:ring-1 focus:ring-brandGold" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandDark text-white font-bold uppercase tracking-wide py-3 rounded hover:bg-gray-800 transition shadow">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandDark text-gray-400 py-10 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2026 Massey Construction Solutions. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-brandGold transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-brandGold transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-open-btn');
+            const closeBtn = document.getElementById('menu-close-btn');
+            const slideMenu = document.getElementById('slide-menu');
+            const menuLinks = document.querySelectorAll('.menu-link');
+
+            menuBtn.addEventListener('click', () => slideMenu.classList.remove('-translate-x-full'));
+            closeBtn.addEventListener('click', () => slideMenu.classList.add('-translate-x-full'));
+            menuLinks.forEach(link => link.addEventListener('click', () => slideMenu.classList.add('-translate-x-full')));
+        });
+    </script>
+</body>
+</html>
